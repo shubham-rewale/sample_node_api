@@ -29,11 +29,6 @@ export const uploadFile = async (req, res, filePath) => {
 			body: fs.createReadStream(filePath)
 		};
 		const receipt = await drive.files.create({ requestBody: fileMetadata, media: media})
-		//fs.unlink(`./uploadedSpreadsheets/${req.file.filename}`, () => { return true; });
-		//return res.status(201).json({
-		//	status: 'success',
-		//	message: 'File Has Been Uploaded'
-		//});
 	}	
 	catch (err) {
 		console.log(err);
