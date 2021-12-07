@@ -1,8 +1,6 @@
-const mongoose = require('mongoose');
-
+import mongoose from 'mongoose';
 
 const dataSchema = new mongoose.Schema({
-
 	DATE: Date,
 	MODE: String,
 	LOCATION: String,
@@ -35,4 +33,4 @@ const dataSchema = new mongoose.Schema({
 
 const Collection_1 = mongoose.model('collection_1', dataSchema);
 
-module.exports = Collection_1;
+export default Collection_1;
